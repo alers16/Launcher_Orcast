@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\9035884_settings_sharp_icon.png" />
+    <None Remove="Assets\9035884_settings_sharp_icon.svg" />
+    <None Remove="Assets\background_main.jpeg" />
+    <None Remove="Assets\favicon.ico" />
+    <None Remove="Assets\Fonts\GrapeSoda.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Black.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Bold.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Italic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Light.ttf" />
+    <None Remove="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Medium.ttf" />
+    <None Remove="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Thin.ttf" />
+    <None Remove="Assets\Fonts\Roboto-ThinItalic.ttf" />
+    <None Remove="Assets\gumball.jpg" />
+    <None Remove="Assets\icons8-ajustes-64.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<TrimmerRootAssembly Include="Avalonia.Themes.Simple" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.9" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.9" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Svg.Skia" Version="11.0.0.13" />
+    <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.9" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+  </ItemGroup>
+</Project>

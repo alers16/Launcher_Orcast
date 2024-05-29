@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="200"
+        Height="100"
+        WindowStartupLocation="CenterScreen"
+        SystemDecorations="None"
+		Background="Transparent"
+		TransparencyLevelHint="Transparent"
+		TransparencyBackgroundFallback="Transparent"
+        x:Class="Launcher.Views.SplashScreen"
+        Icon="/Assets/favicon.ico"
+        Title="Yellow Beavers Launcher">
+
+	<Border Background="#fff" CornerRadius="10">
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Image Source="/Assets/favicon.ico" Height="40" Width="40" ></Image>
+			<TextBlock Text="Cargando..." FontSize="20" Foreground="Black" Margin="0,10,0,0">
+			</TextBlock>
+		</StackPanel>
+	</Border>
+</Window>
